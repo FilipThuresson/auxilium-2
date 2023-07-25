@@ -1,1 +1,1 @@
-<img src="{{ asset('storage/AUXILIUM_LOGO.png') }}" style="height: 32px">
+<img src="{{ asset('icons/AUXILIUM_LOGO.png') }}" style="height: 32px">
