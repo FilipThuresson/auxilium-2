@@ -30,6 +30,7 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
+    'tinymce_token' => env('TINYMCE_TOKEN', 'hello_world'),
 
     /*
     |--------------------------------------------------------------------------

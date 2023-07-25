@@ -1,7 +1,7 @@
 <x-app-layout>
 
     <x-slot name="head">
-        <script src="https://cdn.tiny.cloud/1/nc1d7fjwu41dk74hygbxrf6u69dkpzzl9lw7tl19ka898hq5/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+        <script src="https://cdn.tiny.cloud/1/{{ config('app.tinymce_token') }}/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
         @vite('resources/js/editor.js');
     </x-slot>
 
