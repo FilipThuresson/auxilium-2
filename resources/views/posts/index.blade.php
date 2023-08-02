@@ -2,7 +2,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 text-2xl flex justify-between">
+                <div class="p-6 text-gray-900 text-2xl flex justify-between items-center">
                     <h2>{{ __("Dina trådar") }}</h2>
                     <span class="text-sm">
                         <a href="{{ route('posts.edit', 'new') }}" class="btn bg-green-600 text-white" >

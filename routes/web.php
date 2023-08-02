@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApiTokenController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\ProfileController;
@@ -31,6 +32,10 @@ Route::middleware('auth')->group(function () {
         Route::get('/edit/{id}', [PostsController::class, 'edit'])->name('posts.edit');
         Route::post('/update/{id}', [PostsController::class, 'update'])->name('posts.update');
         Route::delete('/trash/{id}', [PostsController::class, 'destroy'])->name('posts.trash');
+    });
+
+    Route::prefix('/comment')->group(function() {
+        Route::post('/update/{id}', [CommentController::class, 'update'])->name('comments.update');
     });
 
     Route::get('/api_token', [ApiTokenController::class, 'update']);

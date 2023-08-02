@@ -96,7 +96,7 @@ class PostsController extends Controller
         $post->user_id = $request->user()->id;
         $post->save();
 
-        if ($request->post('save_close')) {
+        if ($request->post('save_close') !== null) {
             return redirect(route('posts.index'));
         } else {
             return redirect(route('posts.edit', $post->id));

@@ -2,7 +2,7 @@
 
     <x-slot name="head">
         <script src="https://cdn.tiny.cloud/1/{{ config('app.tinymce_token') }}/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-        @vite('resources/js/editor.js');
+        @vite('resources/js/editor.js')
     </x-slot>
 
     <form method="post" action="{{ route('posts.update', (!is_null($post) && $post->exists ? $post->id : 'new')) }}">
@@ -14,8 +14,9 @@
                     <div class="p-6 text-gray-900 text-2xl flex justify-between">
                         <h2>{{ __("Skapa en tråd") }}</h2>
                         <span class="text-sm">
-                            <button type="submit" name="save" class="btn bg-green-600 text-white">{{ __('Spara') }}</button>
-                            <button type="submit" name="save_close" value="1" class="btn bg-green-600 text-white">{{ __('Spara & stäng') }}</button>
+                            <input type="submit" name="save" class="btn bg-green-600 text-white" value="{{ __('Spara') }}" />
+                            <input type="submit" name="save_close" class="btn bg-green-600 text-white" value="{{ __('Spara & stäng') }}"/>
+                            <a href="{{ url()->previous() }}" class="btn text-base bg-slate-600 text-white" >{{ __('Tillbaka') }}</a>
                         </span>
                     </div>
                     <hr>
